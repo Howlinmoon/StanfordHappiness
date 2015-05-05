@@ -40,7 +40,15 @@ class FaceView: UIView {
         return min(bounds.size.width, bounds.size.height) / 2 * scale
     }
 
-    weak var dataSource: FaceViewDataSource?
+    var dataSource: FaceViewDataSource?
+    
+    // pinch handler
+    func scale(gesture: UIPinchGestureRecognizer) {
+        if gesture.state == .Changed {
+            scale *= gesture.scale
+            gesture.scale = 1
+        }
+    }
     
     
     private struct Scaling {
