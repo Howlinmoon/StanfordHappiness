@@ -50,6 +50,8 @@ class FaceView: UIView {
         }
     }
     
+    // pan handler is taken care of via a control added to the controller
+    
     
     private struct Scaling {
         static let FaceRadiusToEyeRadiusRatio: CGFloat = 10

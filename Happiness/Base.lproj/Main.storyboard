@@ -19,6 +19,7 @@
                             <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="osF-Xh-IYy" customClass="FaceView" customModule="Happiness" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <gestureRecognizers/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="color">
                                         <color key="value" red="1" green="0.084094241048611296" blue="0.16734431871948796" alpha="1" colorSpace="calibratedRGB"/>
@@ -30,6 +31,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1Gi-0R-9Xh" appends="YES" id="9o9-MT-ln4"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -45,8 +49,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OQQ-Wd-bM2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="1Gi-0R-9Xh">
+                    <connections>
+                        <action selector="changeHappiness:" destination="b51-4O-08s" id="DTC-k0-xw2"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="289" y="414"/>
+            <point key="canvasLocation" x="194" y="497"/>
         </scene>
     </scenes>
 </document>
